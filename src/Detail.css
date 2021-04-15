@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+
+
+.artBox {
+  background-color:#f7f7fa;
+  box-shadow: 3.536px 3.536px 10px 0px rgba(2, 7, 24, 0.02),
+  10.607px 10.607px 20px 0px rgba(79, 110, 243, 0.05),
+  -6.364px -6.364px 30px 0px rgba(255, 255, 255, 0.72);
+  border-radius: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.detail-title {
+  margin: 0;
+  color:#7673ff;
+  font-weight:700;
+  text-shadow: 3.536px 3.536px 20px rgba(92, 82, 212, 0.15),
+  2.828px 2.828px 5px rgba(43, 39, 89, 0.07),
+  -4.096px -2.868px 20px rgba(255, 255, 255, 0.25);
+}
+
+.detail-artist {
+  margin: 0;
+  padding: 10px;
+  color:#7673ff;
+  font-weight:700;
+  text-shadow: 3.536px 3.536px 20px rgba(92, 82, 212, 0.15),
+  2.828px 2.828px 5px rgba(43, 39, 89, 0.07),
+  -4.096px -2.868px 20px rgba(255, 255, 255, 0.25);
+}
+
+.detail-tag {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+#tags {
+  background: var(--button-bg-color);
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+  border-radius: 20px;
+  display: inline-block;
+  width: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+#detail-img {
+  width: 50%;
+  height: 50%;
+}
+
+#detail-btn {
+    margin:50px;
+}
