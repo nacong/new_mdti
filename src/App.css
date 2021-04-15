@@ -1,12 +1,62 @@
+@charset "utf-8";
+
 .App {
   text-align: center;
 }
 
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #faf5f5;
+  margin: 0;
+  padding: 0;
+}
+.Row {
+  background-color: blue;
+}
+
+div.head h1 {
+  color:#7673ff;
+  font-weight:900;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0;
+  text-shadow: 3.536px 3.536px 20px rgba(92, 82, 212, 0.15),
+  2.828px 2.828px 5px rgba(43, 39, 89, 0.07),
+  -4.096px -2.868px 20px rgba(255, 255, 255, 0.25);
+}
+
+.card-subj {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  color:black;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+div.container {
+  padding: 20px 30px;
+}
+
+.name {
+  text-align: left;
+}
+
+#name-2 {
+  font-size:min(20px, 7vw); 
+  font-weight: 700;
+  color:#A9A4F0;
+} 
+
+#name-1 {
+  font-size:min(40px, 7vw); 
+  font-weight: 700;
+  color:#A9A4F0;
+}
+
 .col-md-4 {
-  background-color: #eee;
   border-radius: 5px;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 20px;
 }
 
 .App-logo {

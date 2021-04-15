@@ -1,58 +1,51 @@
 /* eslint-disable */
-import { Navbar,Nav,NavDropdown,Form,Button,FormControl,Jumbotron,Card } from 'react-bootstrap';
+import { Row,Col } from 'react-bootstrap';
 import React, { useState } from 'react';
 import './App.css';
+import artData from './data.js';
+import { Card, Icon, Image } from 'semantic-ui-react';
 
 import { Link, Route, Switch } from 'react-router-dom';
 
 function App() {
 
+  let [art, artChange] = useState(artData);
+
   return (
     <div className="App">
-      <Navbar bg="light">
-        <Navbar.Brand>MDTI</Navbar.Brand>
-      </Navbar>
+      <div className="head">
+        <h1>MDTI</h1>
+      </div>
       <Route exact path="/">
+
         <div className="container">
+          <div className="name">
+            <span id="name-1">'디자이너'<span id="name-2">님의 작품</span></span>
+          </div>
           <div className="row">
-            <div className="col-md-4">
-              <p>title</p>
-              <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
-            </div>
-            <div className="col-md-4">
-              <p>title</p>
-              <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
-            </div>
-            <div className="col-md-4">
-              <p>title</p>
-              <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
-            </div>
-            <div className="col-md-4">
-              <p>title</p>
-              <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
-            </div>
-            <div className="col-md-4">
-              <p>title</p>
-              <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
-            </div>
+            {
+              art.map((a,i)=>{ // a = shoes의 데이터
+                return(
+                  <ArtCard art={art[i]}/>
+                )
+              }) 
+            }
           </div>
         </div>
       </Route>
-      <Route path="/detail">
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="https://codingapple1.github.io/shop/shoes1.jpg" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-      </Route>
     </div>
   );
+}
+
+function ArtCard(props) {
+  return (
+    <div className="col-md-4" key={props.art.id}>
+      <div className="card">
+        <h4 className="card-subj">{ props.art.title }</h4>
+        <img className="card-img-bottom" src={ props.art.image }></img>
+      </div>
+    </div>
+  )
 }
 
 export default App;
