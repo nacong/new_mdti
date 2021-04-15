@@ -24,7 +24,7 @@ function App() {
           </div>
           <div className="row">
             {
-              art.map((a,i)=>{ // a = shoes의 데이터
+              art.map((a,i)=>{
                 return(
                   <ArtCard art={art[i]}/>
                 )
