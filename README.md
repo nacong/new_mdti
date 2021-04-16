@@ -1,4 +1,4 @@
 # MDTI (My Design Type Indicator)
 ## 준비물
-npm install react-router-dom
-npm install react-bootstrap
+1. npm install react-router-dom
+2. npm install react-bootstrap
