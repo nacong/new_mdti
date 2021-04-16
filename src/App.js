@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { Row,Col } from 'react-bootstrap';
+import { Row,Col,Navbar,Nav } from 'react-bootstrap';
 import React, { useState } from 'react';
 import './App.css';
 import artData from './data.js';
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <div className="head">
-      <h1>MDTI</h1>
+      <Nav.Link as={Link} to="/"><h1>MDTI</h1></Nav.Link>
       </div>
       <Switch>
         <Route exact path="/">
@@ -44,13 +44,13 @@ function App() {
 
 function ArtCard(props) {
   return (
-    <div className="col-md-4" key={ props.art.id } onClick={ ()=>{
-      window.location = "/detail/"+(props.art.id);
-    } }>
-      <div className="card">
-        <h4 className="card-subj">{ props.art.title }</h4>
-        <img className="card-img-bottom" src={ props.art.image }></img>
-      </div>
+    <div className="col-md-4">
+      <Nav.Link as={Link} to={'/detail/'+(props.art.id)}>
+        <div className="card">
+          <h4 className="card-subj">{ props.art.title }</h4>
+          <img className="card-img" src={ props.art.image }></img>
+        </div>
+      </Nav.Link>
     </div>
   )
 }

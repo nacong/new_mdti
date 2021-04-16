@@ -42,6 +42,10 @@ div.container {
   text-align: left;
 }
 
+.detail-img {
+  padding: 50px;
+}
+
 #name-2 {
   font-size:min(20px, 7vw); 
   font-weight: 700;

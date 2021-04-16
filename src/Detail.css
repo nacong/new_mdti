@@ -59,8 +59,9 @@
 #detail-img {
   width: 50%;
   height: 50%;
+  border-radius: 10px;
 }
 
 #detail-btn {
-    margin:50px;
+  margin:50px;
 }
